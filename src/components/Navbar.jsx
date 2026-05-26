@@ -20,7 +20,9 @@ const Navbar = () => {
     { name: 'About', href: '#about' },
     { name: 'Works', href: '#works' },
     { name: 'Gallery', href: '#gallery' },
-    { name: 'Find Us', href: '#find-us' },
+    { name: 'Reviews', href: '#reviews' },
+    { name: 'Find Us', href: '#find-us' }
+
   ];
 
   return (
@@ -45,7 +47,7 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Menu */}
-        <motion.div 
+        <motion.div
           className="mobile-menu"
           initial={{ x: '100%' }}
           animate={{ x: isOpen ? 0 : '100%' }}
