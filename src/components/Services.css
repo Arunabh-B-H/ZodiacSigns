@@ -1,0 +1,129 @@
+.services-section {
+  background: var(--surface-color-light);
+  position: relative;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+
+.service-card {
+  position: relative;
+  background: var(--surface-color);
+  overflow: hidden;
+  text-align: left;
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+}
+
+.service-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.service-card:hover .service-image {
+  transform: scale(1.1);
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(to top, var(--surface-color) 0%, transparent 100%);
+  z-index: 1;
+}
+
+.service-icon {
+  position: absolute;
+  bottom: -20px;
+  right: 2rem;
+  background: var(--card-bg);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  padding: 1rem;
+  z-index: 2;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-content {
+  padding: 2.5rem 2rem 2rem;
+  position: relative;
+  z-index: 2;
+  flex: 1;
+}
+
+.service-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+  z-index: 2;
+  position: relative;
+}
+
+.service-description {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  z-index: 2;
+  position: relative;
+}
+
+/* Hover effects and Overlays */
+.service-card-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.03), transparent 60%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.service-card:hover .service-card-glow {
+  opacity: 1;
+}
+
+.service-cyan:hover {
+  border-color: var(--neon-cyan);
+  box-shadow: 0 0 30px rgba(0, 243, 255, 0.15);
+}
+
+.service-gold:hover {
+  border-color: var(--neon-gold);
+  box-shadow: 0 0 30px rgba(255, 184, 0, 0.15);
+}
+
+.service-pink:hover {
+  border-color: var(--neon-pink);
+  box-shadow: 0 0 30px rgba(255, 0, 255, 0.15);
+}
+
+@media (max-width: 992px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}

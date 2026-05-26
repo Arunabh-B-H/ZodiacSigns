@@ -1,0 +1,291 @@
+.findus-section {
+  padding: 6rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.findus-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.findus-subtitle {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.findus-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+@media (min-width: 992px) {
+  .findus-grid {
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch;
+  }
+}
+
+/* Map Section Styles */
+.map-container {
+  height: 100%;
+}
+
+.map-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  min-height: 250px;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  text-decoration: none;
+  background-color: var(--card-bg);
+  transition: all 0.3s ease;
+}
+
+.map-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(255, 0, 128, 0.2);
+}
+
+.map-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(var(--neon-pink) 1px, transparent 1px),
+    radial-gradient(var(--neon-cyan) 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-position: 0 0, 20px 20px;
+  opacity: 0.05;
+  z-index: 1;
+}
+
+.map-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.pin-container {
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.pin-shadow {
+  width: 20px;
+  height: 6px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  filter: blur(2px);
+}
+
+.map-info h3 {
+  color: var(--text-primary);
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.map-info p {
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+.directions-btn {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(255, 0, 128, 0.1);
+  color: var(--neon-pink);
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  font-weight: 600;
+  border: 1px solid rgba(255, 0, 128, 0.3);
+  transition: all 0.3s ease;
+}
+
+.map-card:hover .directions-btn {
+  background: var(--neon-pink);
+  color: #fff;
+  box-shadow: 0 0 15px var(--neon-pink);
+}
+
+/* Contact Section Styles */
+.contact-outer-card {
+  background: linear-gradient(145deg, rgba(30, 30, 40, 0.6) 0%, rgba(20, 20, 25, 0.8) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.outer-card-glow {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at 50% 0%, rgba(0, 255, 255, 0.05), transparent 60%);
+  pointer-events: none;
+}
+
+.outer-card-header {
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.outer-card-tag {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-secondary);
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 0.8rem;
+}
+
+.outer-card-tagline {
+  color: var(--text-primary);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.sub-cards-row {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: relative;
+  z-index: 2;
+  flex: 1;
+}
+
+.sub-card {
+  display: flex;
+  flex-direction: column;
+  background: rgba(15, 15, 20, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 1rem;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  flex: 1;
+}
+
+.sub-card-glow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.sub-card:hover .sub-card-glow {
+  opacity: 1;
+}
+
+.sub-card-icon {
+  margin-bottom: 0.6rem;
+  display: inline-flex;
+  padding: 0.6rem;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.03);
+  transition: transform 0.3s ease;
+}
+
+.sub-card:hover .sub-card-icon {
+  transform: scale(1.1);
+}
+
+.sub-card-body {
+  margin-bottom: 0.8rem;
+  flex: 1;
+}
+
+.sub-card-subtitle {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.3rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.sub-card-title {
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.sub-card-cta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  transition: gap 0.3s ease;
+}
+
+.sub-card:hover .sub-card-cta {
+  gap: 0.8rem;
+}
+
+/* Color Variations */
+.sub-card-cyan:hover {
+  border-color: rgba(0, 255, 255, 0.3);
+  box-shadow: 0 10px 30px rgba(0, 255, 255, 0.1);
+}
+.sub-card-cyan .sub-card-icon {
+  color: var(--neon-cyan);
+}
+.sub-card-cyan .sub-card-glow {
+  background: radial-gradient(circle at 100% 100%, rgba(0, 255, 255, 0.1), transparent 70%);
+}
+.sub-card-cyan .sub-card-cta {
+  color: var(--neon-cyan);
+}
+
+.sub-card-green:hover {
+  border-color: rgba(37, 211, 102, 0.3);
+  box-shadow: 0 10px 30px rgba(37, 211, 102, 0.1);
+}
+.sub-card-green .sub-card-icon {
+  color: #25D366;
+}
+.sub-card-green .sub-card-glow {
+  background: radial-gradient(circle at 100% 100%, rgba(37, 211, 102, 0.1), transparent 70%);
+}
+.sub-card-green .sub-card-cta {
+  color: #25D366;
+}

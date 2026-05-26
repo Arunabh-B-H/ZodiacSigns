@@ -1,0 +1,36 @@
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Base styles for buttons and general inputs if needed */
+.btn-primary {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  background: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--neon-cyan);
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: var(--transition);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.btn-primary:hover {
+  background: var(--neon-cyan);
+  color: var(--bg-color);
+  box-shadow: 0 0 15px rgba(0, 243, 255, 0.5);
+}
+
+.btn-gold {
+  border-color: var(--neon-gold);
+}
+
+.btn-gold:hover {
+  background: var(--neon-gold);
+  box-shadow: 0 0 15px rgba(255, 184, 0, 0.5);
+}
