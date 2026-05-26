@@ -1,0 +1,92 @@
+.reviews-section {
+  background: var(--bg-color); /* Match background with other sections */
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.review-card {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: var(--surface-color); /* To stand out from bg-color */
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.reviewer-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.reviewer-avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: var(--neon-cyan);
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.2rem;
+  box-shadow: 0 0 10px rgba(0, 243, 255, 0.3);
+}
+
+/* Let's vary the avatar colors for a better look */
+.review-card:nth-child(2) .reviewer-avatar {
+  background: var(--neon-gold);
+  box-shadow: 0 0 10px rgba(255, 184, 0, 0.3);
+}
+
+.review-card:nth-child(3) .reviewer-avatar {
+  background: var(--neon-pink, #ff00ff);
+  box-shadow: 0 0 10px rgba(255, 0, 255, 0.3);
+}
+
+.reviewer-name {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  margin-bottom: 0.2rem;
+}
+
+.review-date {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.google-icon {
+  background: #ffffff;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+}
+
+.review-rating {
+  color: #fbbc04; /* Classic Google review star color */
+  font-size: 1.2rem;
+  letter-spacing: 3px;
+  margin-top: 0.5rem;
+}
+
+.review-text {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.6;
+  font-weight: 400;
+}

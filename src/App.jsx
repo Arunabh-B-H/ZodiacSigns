@@ -5,6 +5,7 @@ import About from './components/About';
 import Services from './components/Services';
 import Gallery from './components/Gallery';
 import Founders from './components/Founders';
+import Reviews from './components/Reviews';
 import FindUs from './components/FindUs';
 import Footer from './components/Footer';
 
@@ -18,6 +19,7 @@ function App() {
         <Services />
         <Gallery />
         <Founders />
+        <Reviews />
         <FindUs />
       </main>
       <Footer />
